@@ -32,15 +32,39 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    'portfolio',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'portfolio',
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "My Project Admin",
+    "site_header": "My Project",
+    "site_brand": "My Project Brand",
+    "welcome_sign": "Welcome to My Project Admin",
+    "copyright": "My Project © 2024",
+    "search_model": "auth.User",
+    "user_avatar": None,
+
+    # Custom links (for navigation)
+    "topmenu_links": [
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Portfolio", "url": "https://mywebsite.com/support", "new_window": True},
+    ],
+
+    # Custom icons
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,6 +144,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
