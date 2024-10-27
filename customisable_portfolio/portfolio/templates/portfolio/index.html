@@ -7,8 +7,16 @@
     <!--===== HOME =====-->
     <section class="home bd-grid" id="home">
         <div class="home__data">
-            <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">{{ home_content.title }}</span><br>{{ home_content.subtitle }}</h1>
 
+            <h1 class="home__title">
+                Hi,<br>
+                I'am 
+                <a href="{% url 'edit_portfolio' %}" class="home__title-color">
+                    {{ home_content.title }}
+                </a>
+                <br>{{ home_content.subtitle }}
+            </h1>
+            
             <a target="_blank" href="mailto:{{ home_content.email_address }}" class="button">Contact</a>
         </div>
 
