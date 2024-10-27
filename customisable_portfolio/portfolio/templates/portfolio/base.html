@@ -86,7 +86,11 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             
-            <div><a href="/" class="nav__logo">Project</a></div>
+            <div>
+                <a href="/edit" class="nav__logo">Edit</a>
+                <a href="/" class="nav__logo">Project</a>
+            </div>
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
@@ -125,7 +129,7 @@
         const currentYear = new Date().getFullYear();
         document.getElementById('currentYear').textContent = currentYear;
     </script>        
-    
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="{% static 'portfolio/main.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

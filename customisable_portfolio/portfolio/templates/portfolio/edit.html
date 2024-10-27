@@ -207,16 +207,16 @@
     <div class="container">
         <h2>Edit Portfolio</h2>
     </div>
-    
+
     <form method="post" enctype="multipart/form-data" action="">
         {% csrf_token %}
         
         <!-- Home Section -->
         <section id="home">
             <h3>Home</h3>
-            <label>Title:</label>
+            <label>Name:</label>
             <input type="text" name="home_title" value="{{ home_content.title }}" required><br>
-            <label>Subtitle:</label>
+            <label>Designation:</label>
             <input type="text" name="home_subtitle" value="{{ home_content.subtitle }}" required><br>
             <label>GitHub URL:</label>
             <input type="url" name="home_github_url" value="{{ home_content.github_url }}"><br>
