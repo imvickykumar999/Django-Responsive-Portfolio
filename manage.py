@@ -3,10 +3,12 @@
 import os
 import sys
 
+from django.core.wsgi import get_wsgi_application
+app = get_wsgi_application()
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio_project.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogproject.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
