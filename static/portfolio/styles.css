@@ -145,10 +145,12 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
+  text-decoration: none;
 }
 
 .nav__link:hover {
   position: relative;
+  text-decoration: none;
 }
 
 .nav__link:hover::after {
@@ -159,6 +161,7 @@ img {
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
+  text-decoration: none;
 }
 
 .nav__logo {
@@ -490,6 +493,7 @@ img {
   }
   .nav__link {
     color: var(--second-color);
+    text-decoration: none;
   }
   .home {
     padding: 8rem 0 2rem;
