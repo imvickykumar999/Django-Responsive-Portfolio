@@ -9,3 +9,4 @@ Pillow
 django-recaptcha
 django-celery-beat
 requests
+psycopg2-binary
