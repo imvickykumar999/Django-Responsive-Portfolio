@@ -58,7 +58,7 @@ JAZZMIN_SETTINGS = {
     # Custom links (for navigation)
     "topmenu_links": [
         {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"name": "Portfolio", "url": "https://mywebsite.com/support", "new_window": True},
+        {"name": "Portfolio", "url": "/", "new_window": True},
     ],
 
     # Custom icons
